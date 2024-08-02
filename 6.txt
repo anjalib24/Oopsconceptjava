@@ -1,0 +1,60 @@
+Method overloading in Java is a feature that allows a class to have more than one method with the same name, but with different parameter lists. The methods can differ in the number of parameters, the type of parameters, or both. Overloading is a form of polymorphism, and it enhances the readability of the program.
+
+Key Points of Method Overloading
+
+1. Different Parameters: The overloaded methods must have different parameter lists. This can be achieved by changing the number of parameters, the type of parameters, or both.
+2. Same Method Name: All overloaded methods share the same name.
+3. Return Type: The return type of the method does not affect method overloading. Two methods can have the same or different return types, but overloading is determined by the parameters.
+4. Compile-time Polymorphism: Method overloading is an example of compile-time polymorphism (also known as static polymorphism), meaning the method to be called is determined at compile time.
+
+ Example of Method Overloading
+
+```java
+public class MathOperations {
+
+    // Method with two int parameters
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method with three int parameters
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method with two double parameters
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    // Overloaded method with one int and one double parameter
+    public double add(int a, double b) {
+        return a + b;
+    }
+
+    // Overloaded method with one double and one int parameter
+    public double add(double a, int b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MathOperations operations = new MathOperations();
+
+        // Calling the different overloaded methods
+        System.out.println("Sum of two ints: " + operations.add(5, 10));
+        System.out.println("Sum of three ints: " + operations.add(5, 10, 15));
+        System.out.println("Sum of two doubles: " + operations.add(5.5, 10.5));
+        System.out.println("Sum of int and double: " + operations.add(5, 10.5));
+        System.out.println("Sum of double and int: " + operations.add(5.5, 10));
+    }
+}
+```
+ Explanation
+
+- The `MathOperations` class has multiple `add` methods with different parameter lists.
+- The `main` method in the `Main` class demonstrates calling each of these overloaded methods.
+- Java determines which method to call based on the arguments passed at compile time.
+
+Method overloading allows for flexible and readable code, enabling methods to handle various types and numbers of parameters without needing distinct names for each version.

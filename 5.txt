@@ -1,0 +1,1 @@
+Instance variables are allocated memory in the **heap** area, which is used for dynamic memory allocation. Local variables are allocated memory in the **stack** area, which is used for static memory allocation and managing function calls.

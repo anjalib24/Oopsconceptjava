@@ -1,0 +1,58 @@
+The `new` keyword in Java is used to create new objects. When you use `new`, it allocates memory for a new object and returns a reference to that memory. This process involves several steps:
+
+1. Memory Allocation: The `new` keyword allocates memory for the new object on the heap.
+2. Constructor Call: The `new` keyword calls the constructor of the class to initialize the object.
+3. Reference Assignment: The reference to the newly created object is assigned to a variable.
+
+ Example Usage of `new` Keyword
+
+Let's break down an example to illustrate these steps.
+
+ Step 1: Define a Class
+
+```java
+public class Car {
+    String color;
+    String model;
+
+    // Constructor
+    public Car(String color, String model) {
+        this.color = color;
+        this.model = model;
+    }
+
+    // Method to display car details
+    public void displayDetails() {
+        System.out.println("Color: " + color);
+        System.out.println("Model: " + model);
+    }
+}
+```
+ Step 2: Create an Object Using `new` Keyword
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of the Car class using 'new' keyword
+        Car myCar = new Car("Red", "Toyota");
+
+        // Call the method to display car details
+        myCar.displayDetails();
+    }
+}
+```
+
+Explanation of `new` Keyword Usage
+
+1. Memory Allocation: When `new Car("Red", "Toyota")` is executed, memory is allocated on the heap for a new `Car` object.
+2. Constructor Call: The `Car` constructor (`public Car(String color, String model)`) is called with the arguments `"Red"` and `"Toyota"`. This initializes the `color` and `model` fields of the `Car` object.
+3. Reference Assignment: The reference to the new `Car` object is returned and assigned to the variable `myCar`.
+
+Key Points
+
+- Creating Objects: The `new` keyword is essential for creating objects from classes.
+- Constructor Invocation: It ensures that the constructor is called, allowing you to initialize the object's state.
+- Heap Allocation: The object is created on the heap, which allows for dynamic memory management.
+- Reference Handling: The reference to the new object is stored in a variable, allowing you to interact with the object.
+
+Without the `new` keyword, you cannot instantiate objects in Java, which means you cannot create and use instances of classes in your programs.

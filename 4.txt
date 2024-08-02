@@ -1,0 +1,1 @@
+Instance variables are declared in a class, accessible by all methods, and exist for the object's lifetime. Local variables are declared inside methods, accessible only within that method, and exist only during method execution. Instance variables get default values, while local variables must be explicitly initialized.
